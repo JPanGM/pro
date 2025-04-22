@@ -373,13 +373,13 @@ header #logo{
 }
 #contact h1{
   position: absolute;
-  top:80%;
+  top:90%;
   left: 0%;
   color: lightgreen;
   box-shadow: 0px 0px 50px #5f943c;
   width: fit-content;
   padding: 10px;
-  font-size: 8rem;
+  font-size: 7rem;
 }
 #contact h1{
   animation: appear 3s linear;
@@ -387,16 +387,21 @@ header #logo{
   animation-range: entry 0% cover 20%;
 }
 #contact ul{
+ 
   list-style: none;
-  
   margin: 0%;
   padding: 10%;
   overflow: hidden;
   position: relative;
-  top: 70%;
-  left: 60%;
+  top: 35%;
+  left: 85%;
 }
 #contact ul a{
+  width: 30px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding: 1%;
   margin: 1%;
   box-shadow: 0px 0px 50px #5f943c;
