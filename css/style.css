@@ -1,0 +1,468 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0%;
+  padding: 0%;
+}
+section{
+  padding: 0%;
+  margin: 0%;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+header nav{
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+header nav ul{
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  float: right;
+  overflow: hidden;
+}
+header nav ul li{
+  float: left;
+}
+header nav ul li a{
+  display: block;
+  color: #030303;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+  background-color: #4CAF50;
+  color: #000;
+}
+header #logo{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: auto;
+}
+#home #back{
+  position: absolute;
+  top: 0%;
+  left:0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: -1;
+}
+#home #p1{
+  color: #4CAF50;
+  font-size: 30px;
+  position: absolute;
+  top: calc(65%);
+  left: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+#home .container{
+  line-height: 35px;
+  height: 80px;
+  color: #4CAF50;
+  font-size: 30px;
+  position: absolute;
+  top: calc(70%);
+  left: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+.container li{
+  list-style: none;
+}
+#home .h{
+  position: absolute;
+  top:80%;
+  left: 0%;
+  color: lightgreen;
+  box-shadow: 0px 0px 50px #5f943c;
+  width: fit-content;
+  padding: 10px;
+  font-size: 8rem;
+}
+#home .h{
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+#home h1{
+  color: #4CAF50;
+  font-size: 70px;
+  font-family:'Times New Roman', serif;
+  position: absolute;
+  top: calc(30%);
+  left: 800px;
+  box-shadow: 0px 0px 50px #5f943c;
+}
+#about h2{
+  position: relative;
+  top:70%;
+  left: 0%;
+  color: lightgreen;
+  box-shadow: 0px 0px 50px #5f943c;
+  width: fit-content;
+  padding: 10px;
+  font-size: 10rem;
+  
+}
+#about h2{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+#about div {
+  float: right;
+  margin: 1%;
+  padding: 1%;
+  width: 250px;
+  height: 200px;
+  box-shadow: 0px 0px 50px #5f943c;
+}
+#about div{
+  animation: scale 3s linear ;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+#team{
+  display: flex;
+}
+#team h1{
+  position: absolute;
+  top:80%;
+  left: 0%;
+  color: lightgreen;
+  box-shadow: 0px 0px 50px #5f943c;
+  width: fit-content;
+  padding: 10px;
+  font-size: 8rem;
+}
+#team h1{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+#team .hod img{
+  position: relative;
+  top: 15%;
+  left: 40%;
+  width: 200px;
+  box-shadow: 0px 0px 50px #5f943c;
+  border-radius: 50%;
+}
+#team .hod img{
+  animation: opacity 3s linear ;
+  animation-timeline: view();
+  animation-range: entry 0% cover 70%;
+}
+#team .members img{
+  animation: opacity 3s linear ;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+#team .h2, #team p{
+  animation: opacity-text 10s linear ;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+#team .h2{
+  position: relative;
+  top: 20%;
+  left: 30%;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: 'Times New Roman', serif;
+}
+#team .hod p{
+  position: relative;
+  top: 25%;
+  left: 30%;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: 'Times New Roman', serif;
+}
+#team .vl{
+  position: absolute;
+  top: 0%;
+  left: 30%;
+  width: 7px;
+  height: 80%;
+  margin: 0 auto;
+  background-color: #5f943c;
+}
+#team .ts{
+  position: relative;
+  top: 7%;
+  left: 40%;
+}
+#team .members img{
+  position: relative;
+  top: 15%;
+  left: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 1%;
+  padding: 1%;
+  width: 100px;
+  box-shadow: 0px 0px 50px #5f943c;
+
+}
+#team .members p{
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: 'Times New Roman', serif;
+  position: relative;
+  top: 3%;
+  left: 170%;
+}
+#information h1{
+  position: absolute;
+  top:80%;
+  left: 0%;
+  color: lightgreen;
+  box-shadow: 0px 0px 50px #5f943c;
+  width: fit-content;
+  padding: 10px;
+  font-size: 8rem;
+}
+#information h1{
+  animation: appear 10s linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 100%;
+}
+#information #datetime{
+  font-size: 1.5rem;
+  font-family: Arial, sans-serif;
+  color: lightgreen;
+  box-shadow: 0px 0px 50px #5f943c;
+  width: fit-content;
+  margin: 20px;
+  position: relative;
+  top: 1%;
+  left: 30%;
+}
+#information #datetime{
+  animation: appear-r linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+#information .updates{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  top: 30%;
+  padding: 1%;
+  margin: 1%;
+}
+#information .updates h2{
+  animation: appear 10s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+#information .updates h2{
+  transform: rotate(270deg); /* Rotates the element 90 degrees */
+  transform-origin: left center; /* Sets the rotation point */
+  display: inline-block;
+  display: inline-block;
+  position: relative;
+  left: 5%;
+  padding: 2%;
+  margin: 1%;
+  
+}
+#information .updates li{
+  list-style: arrow;
+  margin: 4%;
+  padding: 1%;
+  box-shadow: 0px 0px 50px #5f943c;
+  position: relative;
+  top: -30%;
+  left: -22%;
+}
+#information .updates li{
+  animation: appear-r 3s linear ;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+}
+#gallery h1{
+  position: absolute;
+  top:80%;
+  left: 0%;
+  color: lightgreen;
+  box-shadow: 0px 0px 50px #5f943c;
+  width: fit-content;
+  padding: 10px;
+  font-size: 8rem;
+}
+#gallery h1{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+#gallery{
+  padding: 2rem;
+  z-index: 0;
+}
+#gallery .slider-wraper{
+  position: relative;
+  top: 10%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+#gallery .slider-wraper{
+  animation: scale-j 3s linear ;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+#gallery .slider-wraper .slider{
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0px 0px 50px #5f943c;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+#gallery .slider-wraper .slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  z-index: -1;
+}
+#gallery .slider-wraper .slider-nav{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+} 
+#gallery .slider-wraper .slider-nav a{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #bfff94;
+  opacity: 0.75;
+  border: none;
+  cursor: pointer;
+  transition: opacity ease 250ms;
+}
+#gallery .slider-wraper .slider-nav a:hover{
+  opacity: 1;
+}
+#contact h1{
+  position: absolute;
+  top:80%;
+  left: 0%;
+  color: lightgreen;
+  box-shadow: 0px 0px 50px #5f943c;
+  width: fit-content;
+  padding: 10px;
+  font-size: 8rem;
+}
+#contact h1{
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+#contact ul{
+  list-style: none;
+  
+  margin: 0%;
+  padding: 10%;
+  overflow: hidden;
+  position: relative;
+  top: 70%;
+  left: 60%;
+}
+#contact ul a{
+  padding: 1%;
+  margin: 1%;
+  box-shadow: 0px 0px 50px #5f943c;
+}
+@keyframes appear{
+  from{
+  opacity:0;
+  transform: translateX(1000px)
+}
+  to{opacity:1;
+  transform: translateX(0%)}
+  
+}
+@keyframes appear-r{
+  from{
+  opacity:0;
+  transform: translateX(-1000px)
+}
+  to{opacity:1;
+  transform: translateX(0%)}
+  
+}
+@keyframes scale{
+  from{
+  opacity:1;
+  scale: 0.5 ;
+}
+  to{opacity:1;
+  scale: 1}
+  
+}
+@keyframes opacity{
+  from{
+    opacity: 0;
+    scale: 0.5
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes opacity-text{
+  from{
+    opacity: 0;
+    
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes scale-j{
+  from{
+  
+  scale: 0.5 ;
+}
+  to{
+  scale: 1}
+  
+}
+
+#preloader{
+  background: white url('pre.gif') no-repeat center center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
+}

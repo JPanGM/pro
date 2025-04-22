@@ -1,0 +1,143 @@
+<!--website for communication between team members--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+
+</head>
+<body>
+  <div id="preloader"></div>
+   <header>
+    <a href="#home"><img id="logo" src="asset/logo.png" alt="logo"></a>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#information">New</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      </nav>
+    </header>
+    <section id="home">
+      <div id="back">
+        <video autoplay muted loop>
+          <source src="asset/wecome.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <h1 class="h">HOME</h1>
+      <h1>Welcome Welcome to the Project Website!</h1>
+      <h1 id="p1">National Institute of Technology</h1>
+      <div class="container">
+        <li><span id="text1"></span></li>
+      </div>      
+      <video src="project.mp4" alt="weclome video"></video>
+    </section>
+    <section id="about">
+      <h2>About</h2>
+      <div>
+        <h1>COMMUNICATION</h1>
+        <p>This website is mainly build for communication between Professor 
+           <br>Every can share idea about anything
+          <br>Everyone is welcome</p>
+      </div>
+      <div>
+        <h1>NOTIFICATION</h1>
+        <p>Here all the information regarding the college as well as other inormation  usefull to use will be share for the student as well as the professor side</p>
+      </div>
+      <div>
+        <h1>RESOURCES</h1>
+        <p>Resources relating to the department will be available here. Many book and refereces is available</p>
+      </div>
+      <div>
+        <h1>HELP</h1>
+        <p>Here you can find the help regarding the project and other information. You can also ask for help from the professor.</p>
+      </div>
+      </section>      
+   <section id="team">
+    <h1>PERSONNAL</h1>
+    <div class="hod">
+      <img src="asset/hod.jpg" alt="HOD">
+      <h2 class="h2">HEAD OF DEPARTMENT</h2>
+      <p>Name: John Doe<br>Email: john.doe@example.com<br>Role: Project Manager</p>
+    </div>
+    <div class="vl"></div>
+    <h2 class="ts">Teaching Staff</h2>
+    <div class="members">
+      <img src="asset/hod.jpg" alt="member1">
+      <p>Name: Jane Smith<br>Email: jane.smith@example.com<br>Role: Developer</p>
+      <img src="asset/hod.jpg" alt="member2">
+      <p>Name: Alex Johnson<br>Email: alex.johnson@example.com<br>Role: Designer</p>
+      <img src="asset/hod.jpg" alt="member3">
+      <p>Name: Emily Davis<br>Email: emily.davis@example.com<br>Role: Tester</p>
+    </div>
+    </section>
+  <section id="information">
+    <h1>NEWS</h1>
+    <div id="datetime"></div>
+    <div class="updates">
+     <h2>Notifications</h2>
+      <ul>
+        <li>New project guidelines have been released.</li>
+        <li>Team meeting scheduled for next Monday.</li>
+        <li>Project deadline extended by two weeks.</li>
+        <li>New resources added to the library section.</li>
+      </ul>
+      <h2>Academics</h2>
+      <ul>
+        <li>Midterm exams will be held next month.</li>
+        <li>Guest lecture on AI scheduled for next Friday.</li>
+        <li>New course on Web Development available.</li>
+        <li>Internship opportunities posted on the notice board.</li>
+      </ul>
+      <h2>Events</h2>
+      <ul>
+        <li>Annual Tech Fest on 15th March.</li>
+        <li>Workshop on Machine Learning on 20th March.</li>
+        <li>Alumni meet scheduled for 25th March.</li>
+        <li>Hackathon event on 30th March.</li>
+      </ul>
+    </div>
+  </section>
+  <section id="gallery">
+    <h1>GALLERY</h1>
+    <div class="slider-wraper">
+      <div class="slider">
+      <img id="slide-1" src="asset/img1.jpeg" alt="slide1">
+      <img id="slide-2"src="asset/2.jpeg" alt="slide2">
+      <img id="slide-3" src="asset/3.jpeg" alt="slide3">
+      <img id="slide-4" src="asset/4.jpeg" alt="slide4"> 
+      <img id="slide-5" src="asset/5.jpeg" alt="slide5">
+      <img id="slide-6" src="asset/6.jpeg" alt="slide6">
+      </div>
+      <div class="slider-nav">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+        <a href="#slide-4"></a>
+        <a href="#slide-5"></a>
+        <a href="#slide-6"></a>
+      </div>
+  </div>
+  </section>
+  <section id="contact">
+    <h1>CONTACT</h1>
+    <ul>
+      <a href=""><span></span><i class="fa-brands fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+       
+    </ul>
+  </section>
+</body>
+</html>
