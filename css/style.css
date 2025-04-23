@@ -263,39 +263,50 @@ header #logo{
   flex-wrap: wrap;
   flex-direction: row;
   position: relative;
-  top: 30%;
+  top: 10%;
   padding: 1%;
   margin: 1%;
+}
+#information .updates h2{
+  height: fit-content;
+  position:relative;
+  left: -10%;
+  padding: 3%;
+  margin-left: 20%;
+  box-shadow: 0px 0px 50px #5f943c;
 }
 #information .updates h2{
   animation: appear 10s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
-#information .updates h2{
-  transform: rotate(270deg); /* Rotates the element 90 degrees */
-  transform-origin: left center; /* Sets the rotation point */
-  display: inline-block;
-  display: inline-block;
-  position: relative;
-  left: 5%;
+#information .updates li{
   padding: 2%;
-  margin: 1%;
-  
-}
-#information .updates li{
-  list-style: arrow;
-  margin: 4%;
-  padding: 1%;
+  margin: 3%;
   box-shadow: 0px 0px 50px #5f943c;
-  position: relative;
-  top: -30%;
-  left: -22%;
 }
-#information .updates li{
-  animation: appear-r 3s linear ;
+#information .updates .n1{
+width: 25%;
+position: absolute;
+top: 100%;
+left: 3%;
+}
+#information .updates .n2{
+  width: 25%;
+  position: absolute;
+  top: 100%;
+  left: 35%;
+  }
+#information .updates .n3{
+    width: 25%;
+    position: absolute;
+    top: 100%;
+    left: 70%;
+  }
+#information .updates .n2, .n1, .n3{
+  animation: appear-r 10s linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 45%;
+  animation-range: entry 0% cover 40%;
 }
 #gallery h1{
   position: absolute;
