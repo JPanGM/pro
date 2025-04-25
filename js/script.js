@@ -1,23 +1,28 @@
-let sections = document.querySelectorAll('section');
-let navlinks = document.querySelectorAll('header nav a');
+let sections = document.querySelectorAll("section");
+let navlinks = document.querySelectorAll("header nav a");
+
 window.onscroll = () => {
-  sections.forEach(sec => {
-    let top = window.scrollY;
+  let top = window.scrollY + 1; // Add a small offset to avoid precision issues
+
+  sections.forEach((sec) => {
     let offset = sec.offsetTop;
     let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
+    let id = sec.getAttribute("id");
 
+    // Check if the scroll position is within the current section
     if (top >= offset && top < offset + height) {
-      navlinks.forEach(link => {
-        link.classList.remove('active');
-        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+      navlinks.forEach((link) => {
+        link.classList.remove("active"); // Remove active from all links
       });
-    };
+      document
+        .querySelector(`header nav a[href*="${id}"]`)
+        ?.classList.add("active"); // Add active to the correct link
+    }
   });
 };
 document.addEventListener('wheel', function (event) {
   event.preventDefault(); // Prevent the default scrolling behavior
-  const scrollSpeed = 2; // Adjust this value to control the speed (lower = slower)
+  const scrollSpeed = 6; // Adjust this value to control the speed (lower = slower)
   window.scrollBy({
     top: event.deltaY * scrollSpeed, // Multiply the scroll delta by the speed factor
     behavior: 'smooth', // Smooth scrolling effect
