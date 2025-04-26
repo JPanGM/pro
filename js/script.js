@@ -27,7 +27,7 @@ document.addEventListener('wheel', function (event) {
     top: event.deltaY * scrollSpeed, // Multiply the scroll delta by the speed factor
     behavior: 'smooth', // Smooth scrolling effect
   });
-}, { passive: false }); // Set passive to false to allow `preventDefault`
+}, { passive: false });
 document.addEventListener("DOMContentLoaded", function () {
   const texts = [
     "Imphal West, Manipur",
@@ -97,3 +97,70 @@ var loader=document.getElementById("preloader");
 window.addEventListener("load",function(){
   loader.style.display="none";
 })
+ // Initialize Socket.IO with explicit URL and options
+ const socket = io('http://localhost:3000', {
+  transports: ['websocket'],
+  reconnectionAttempts: 5
+});
+
+const messages = document.getElementById('messages');
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
+const userCount = document.getElementById('user-count');
+
+// Debug connection events
+socket.on('connect', () => {
+  console.log('Connected to server:', socket.id);
+});
+socket.on('connect_error', (error) => {
+  console.error('Connection error:', error.message);
+  messages.innerHTML += '<li class="text-red-500 italic py-2">Failed to connect to server. Please try refreshing.</li>';
+});
+
+// Prompt for username
+let username = prompt('Enter your username:') || 'Anonymous';
+socket.emit('user joined', username);
+console.log('Emitted user joined:', username);
+
+// Send message
+sendButton.addEventListener('click', () => {
+  const message = messageInput.value.trim();
+  if (message) {
+      socket.emit('chat message', { username, message });
+      console.log('Sent message:', { username, message });
+      messageInput.value = '';
+  }
+});
+
+// Send message on Enter key
+messageInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+      sendButton.click();
+  }
+});
+
+// Receive message
+socket.on('chat message', ({ username, message }) => {
+  console.log('Received message:', { username, message });
+  const li = document.createElement('li');
+  li.className = 'py-2';
+  li.innerHTML = `<strong>${username}:</strong> ${message}`;
+  messages.appendChild(li);
+  messages.scrollTop = messages.scrollHeight;
+});
+
+// Update user count
+socket.on('user count', (count) => {
+  console.log('User count updated:', count);
+  userCount.textContent = count;
+});
+
+// System message
+socket.on('system message', (msg) => {
+  console.log('System message:', msg);
+  const li = document.createElement('li');
+  li.className = 'text-gray-500 italic py-2';
+  li.textContent = msg;
+  messages.appendChild(li);
+  messages.scrollTop = messages.scrollHeight;
+});

@@ -5,6 +5,35 @@
 }
 body{
  overflow-x: hidden;
+ font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+#chat-container { 
+  box-shadow: 0px 0px 50px #5f943c;
+  position: relative;
+  top:-12vh;
+  left: 1%;
+   width: 80%;
+   margin: 0 auto; 
+   padding: 20px; 
+   z-index: 100;
+  }
+#messages { 
+  height: 40vh;
+  overflow-y: scroll;
+  border: 1px solid #5f943c;
+  padding: 10px;
+  margin-bottom: 10px;
+  z-index: 100;
+}
+#message-input { 
+  border: 1px solid #5f943c;
+  width: 80%;
+  padding: 10px; 
+  z-index: 100;
+}
+#send-button { 
+padding: 10px 20px; 
+z-index: 100;
 }
 section{
   background: rgb(255, 255, 255);
@@ -276,7 +305,7 @@ nav ul li a.active{
   margin: 0%;
   padding: 0%;
   position: relative;
-  top: 35vh;
+  top: -55vh;
   left: 95%;
 }
 .social li{
